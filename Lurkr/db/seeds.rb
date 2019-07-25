@@ -8,3 +8,8 @@
 
 u1 = User.create(first_name: "Christopher", last_name: "Cabell", username: "ccabell", email_address: "x@gmail.com");
 
+sr1 = Subreddit.create(name: "cars");
+
+sb1 = Subscription.create(user_id: u1.id, subreddit_id: sr1.id);
+
+set1 = Setting.create(user_id: u1.id, num_records: 5);

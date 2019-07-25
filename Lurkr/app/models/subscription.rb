@@ -1,4 +1,4 @@
 class Subscription < ApplicationRecord
-  belongs_to: user
-  belongs_to: subreddit
+  belongs_to :user
+  belongs_to :subreddit
 end

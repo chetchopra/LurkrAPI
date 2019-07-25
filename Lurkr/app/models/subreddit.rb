@@ -1,3 +1,3 @@
 class Subreddit < ApplicationRecord
-  has_many: subscriptions
+  has_many :subscriptions
 end
