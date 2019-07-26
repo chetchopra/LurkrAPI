@@ -1839,3 +1839,786 @@ Migrating to CreateSettings (20190725170047)
   [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT $1[0m  [["LIMIT", 11]]
   [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT $1[0m  [["LIMIT", 11]]
   [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT $1[0m  [["LIMIT", 11]]
+Started GET "/" for ::1 at 2019-07-25 15:51:16 -0700
+  [1m[35m (2.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/Chet/.rvm/gems/ruby-2.6.1/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/Chet/.rvm/gems/ruby-2.6.1/gems/railties-5.2.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/Chet/.rvm/gems/ruby-2.6.1/gems/railties-5.2.3/lib/rails/templates/rails/welcome/index.html.erb (3.4ms)
+Completed 200 OK in 9ms (Views: 5.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/subreddits" for ::1 at 2019-07-25 15:51:20 -0700
+Processing by SubredditsController#index as HTML
+Completed 204 No Content in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for ::1 at 2019-07-25 15:51:29 -0700
+  
+AbstractController::ActionNotFound (The action 'index' could not be found for UsersController):
+  
+actionpack (5.2.3) lib/abstract_controller/base.rb:129:in `process'
+actionpack (5.2.3) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.3) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.3) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.3) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.3) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.3) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.3) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.3) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack (2.0.7) lib/rack/etag.rb:25:in `call'
+rack (2.0.7) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.7) lib/rack/head.rb:12:in `call'
+activerecord (5.2.3) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.3) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.3) lib/rack/cors.rb:95:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/subreddits" for ::1 at 2019-07-25 15:51:41 -0700
+Processing by SubredditsController#index as HTML
+Completed 204 No Content in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for ::1 at 2019-07-25 15:52:06 -0700
+  
+AbstractController::ActionNotFound (The action 'index' could not be found for UsersController):
+  
+actionpack (5.2.3) lib/abstract_controller/base.rb:129:in `process'
+actionpack (5.2.3) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.3) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.3) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.3) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.3) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.3) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.3) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.3) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack (2.0.7) lib/rack/etag.rb:25:in `call'
+rack (2.0.7) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.7) lib/rack/head.rb:12:in `call'
+activerecord (5.2.3) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.3) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.3) lib/rack/cors.rb:95:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/subreddits" for ::1 at 2019-07-25 15:52:17 -0700
+Processing by SubredditsController#index as HTML
+Completed 204 No Content in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/subredits" for ::1 at 2019-07-25 15:53:38 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/subredits"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.3) lib/rack/cors.rb:95:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/subreddits" for ::1 at 2019-07-25 15:53:44 -0700
+  
+SyntaxError (/Users/Chet/Desktop/fsprojects/LurkrAPI/Lurkr/app/controllers/subreddits_controller.rb:4: syntax error, unexpected ':', expecting =>
+    items = {1: "chris is dumb"}
+              ^
+/Users/Chet/Desktop/fsprojects/LurkrAPI/Lurkr/app/controllers/subreddits_controller.rb:4: syntax error, unexpected '}', expecting end
+...   items = {1: "chris is dumb"}
+...                              ^):
+  
+app/controllers/subreddits_controller.rb:4: syntax error, unexpected ':', expecting =>
+app/controllers/subreddits_controller.rb:4: syntax error, unexpected '}', expecting end
+Started GET "/subreddits" for ::1 at 2019-07-25 15:54:03 -0700
+Processing by SubredditsController#index as HTML
+Completed 200 OK in 1ms (Views: 0.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/subreddits" for ::1 at 2019-07-25 15:54:37 -0700
+  [1m[35m (8.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/Chet/.rvm/gems/ruby-2.6.1/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by SubredditsController#index as HTML
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/subreddits" for ::1 at 2019-07-25 15:54:38 -0700
+Processing by SubredditsController#index as HTML
+Completed 200 OK in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/subreddits" for ::1 at 2019-07-25 16:03:58 -0700
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/Chet/.rvm/gems/ruby-2.6.1/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by SubredditsController#index as HTML
+Completed 200 OK in 23ms (Views: 0.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/subreddits" for ::1 at 2019-07-25 16:04:02 -0700
+Processing by SubredditsController#index as HTML
+Completed 200 OK in 9ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/subreddits" for ::1 at 2019-07-25 16:04:23 -0700
+Processing by SubredditsController#index as HTML
+Completed 200 OK in 12ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/subreddits" for ::1 at 2019-07-25 16:04:24 -0700
+Processing by SubredditsController#index as HTML
+Completed 200 OK in 19ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/subreddits" for ::1 at 2019-07-25 16:06:18 -0700
+Processing by SubredditsController#index as HTML
+Completed 500 Internal Server Error in 118ms (ActiveRecord: 0.0ms)
+
+
+  
+Errno::ECONNREFUSED (Failed to open TCP connection to www.something.com:80 (Connection refused - connect(2) for "www.something.com" port 80)):
+  
+app/controllers/subreddits_controller.rb:9:in `index'
+Started GET "/subreddits" for ::1 at 2019-07-25 16:09:50 -0700
+Processing by SubredditsController#index as HTML
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+Errno::ECONNREFUSED (Failed to open TCP connection to www.something.com:80 (Connection refused - connect(2) for "www.something.com" port 80)):
+  
+app/controllers/subreddits_controller.rb:6:in `index'
+Started GET "/subreddits" for ::1 at 2019-07-25 16:10:15 -0700
+Processing by SubredditsController#index as HTML
+Completed 200 OK in 14ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/subreddits" for ::1 at 2019-07-25 16:10:53 -0700
+Processing by SubredditsController#index as HTML
+Completed 200 OK in 8ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/subreddits" for ::1 at 2019-07-25 16:11:39 -0700
+Processing by SubredditsController#index as HTML
+Completed 200 OK in 24ms (Views: 0.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/subreddits" for ::1 at 2019-07-25 16:11:44 -0700
+Processing by SubredditsController#index as HTML
+Completed 200 OK in 15ms (Views: 0.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/subreddits" for ::1 at 2019-07-25 16:11:58 -0700
+Processing by SubredditsController#index as HTML
+Completed 200 OK in 15ms (Views: 0.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/subreddits" for ::1 at 2019-07-25 16:12:06 -0700
+Processing by SubredditsController#index as HTML
+Completed 200 OK in 17ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/subreddits" for ::1 at 2019-07-25 16:13:07 -0700
+Processing by SubredditsController#index as HTML
+Completed 500 Internal Server Error in 1053ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `message' for "":String):
+  
+app/controllers/subreddits_controller.rb:7:in `index'
+Started GET "/subreddits" for ::1 at 2019-07-25 16:15:04 -0700
+Processing by SubredditsController#index as HTML
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+
+
+  
+LoadError (cannot load such file -- rest-client):
+  
+app/controllers/subreddits_controller.rb:5:in `index'
+Started GET "/subreddits" for ::1 at 2019-07-25 16:15:14 -0700
+Processing by SubredditsController#index as HTML
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (uninitialized constant SubredditsController::RestClient):
+  
+app/controllers/subreddits_controller.rb:5:in `index'
+Started GET "/subreddits" for ::1 at 2019-07-25 16:16:49 -0700
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/Chet/.rvm/gems/ruby-2.6.1/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by SubredditsController#index as HTML
+Completed 500 Internal Server Error in 1241ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (undefined local variable or method `res' for #<SubredditsController:0x00007f97fe50bca0>
+Did you mean?  redo):
+  
+app/controllers/subreddits_controller.rb:9:in `index'
+Started GET "/subreddits" for ::1 at 2019-07-25 16:17:04 -0700
+  
+SyntaxError (/Users/Chet/Desktop/fsprojects/LurkrAPI/Lurkr/app/controllers/subreddits_controller.rb:8: syntax error, unexpected '\n', expecting =>):
+  
+app/controllers/subreddits_controller.rb:8: syntax error, unexpected '\n', expecting =>
+Started GET "/subreddits" for ::1 at 2019-07-25 16:17:15 -0700
+Processing by SubredditsController#index as HTML
+Completed 200 OK in 1958ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/subreddits" for ::1 at 2019-07-25 16:17:45 -0700
+Processing by SubredditsController#index as HTML
+Completed 200 OK in 1188ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/subreddits" for ::1 at 2019-07-25 16:18:01 -0700
+Processing by SubredditsController#index as HTML
+Completed 200 OK in 1981ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/subreddits" for ::1 at 2019-07-25 16:18:20 -0700
+Processing by SubredditsController#index as HTML
+Completed 200 OK in 1692ms (Views: 24.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/subreddits" for ::1 at 2019-07-25 16:18:41 -0700
+  
+SyntaxError (/Users/Chet/Desktop/fsprojects/LurkrAPI/Lurkr/app/controllers/subreddits_controller.rb:8: syntax error, unexpected '\n', expecting =>):
+  
+app/controllers/subreddits_controller.rb:8: syntax error, unexpected '\n', expecting =>
+Started GET "/subreddits" for ::1 at 2019-07-25 16:19:10 -0700
+Processing by SubredditsController#index as HTML
+Completed 200 OK in 566ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/subreddits" for ::1 at 2019-07-25 16:23:30 -0700
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/Chet/.rvm/gems/ruby-2.6.1/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by SubredditsController#index as HTML
+Completed 200 OK in 97ms (Views: 0.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/subreddits" for ::1 at 2019-07-25 16:23:48 -0700
+Processing by SubredditsController#index as HTML
+Completed 200 OK in 1032ms (Views: 0.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/subreddits" for ::1 at 2019-07-25 16:25:14 -0700
+Processing by SubredditsController#index as HTML
+Completed 200 OK in 25ms (Views: 0.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/subreddits" for ::1 at 2019-07-25 16:25:35 -0700
+Processing by SubredditsController#index as HTML
+Completed 500 Internal Server Error in 29ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `body' for "":String):
+  
+app/controllers/subreddits_controller.rb:10:in `index'
+Started GET "/subreddits" for ::1 at 2019-07-25 16:25:55 -0700
+Processing by SubredditsController#index as HTML
+Completed 200 OK in 48ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/subreddits" for ::1 at 2019-07-25 16:26:07 -0700
+Processing by SubredditsController#index as HTML
+Completed 200 OK in 20ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/subreddits" for ::1 at 2019-07-25 16:26:18 -0700
+Processing by SubredditsController#index as HTML
+Completed 200 OK in 291ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/subreddits" for ::1 at 2019-07-25 16:26:54 -0700
+Processing by SubredditsController#index as HTML
+Completed 200 OK in 1497ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/subreddits" for ::1 at 2019-07-25 16:37:58 -0700
+Processing by SubredditsController#index as HTML
+Completed 500 Internal Server Error in 485ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `data' for <RestClient::Response 200 "{\"kind\": \"L...">:RestClient::Response):
+  
+app/controllers/subreddits_controller.rb:6:in `index'
+Started GET "/subreddits" for ::1 at 2019-07-25 16:39:34 -0700
+Processing by SubredditsController#index as HTML
+Completed 500 Internal Server Error in 506ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `data' for <RestClient::Response 200 "{\"kind\": \"L...">:RestClient::Response):
+  
+app/controllers/subreddits_controller.rb:6:in `index'
+Started GET "/subreddits" for ::1 at 2019-07-25 16:39:52 -0700
+Processing by SubredditsController#index as HTML
+Completed 200 OK in 746ms (Views: 4.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/subreddits" for ::1 at 2019-07-25 16:40:19 -0700
+Processing by SubredditsController#index as HTML
+Completed 500 Internal Server Error in 557ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `kind' for <RestClient::Response 200 "{\"kind\": \"L...">:RestClient::Response):
+  
+app/controllers/subreddits_controller.rb:6:in `index'
+Started GET "/subreddits" for ::1 at 2019-07-25 16:40:32 -0700
+Processing by SubredditsController#index as HTML
+Completed 500 Internal Server Error in 1212ms (ActiveRecord: 0.0ms)
+
+
+  
+TypeError (no implicit conversion of Symbol into Integer):
+  
+app/controllers/subreddits_controller.rb:6:in `[]'
+app/controllers/subreddits_controller.rb:6:in `index'
+Started GET "/subreddits" for ::1 at 2019-07-25 16:40:58 -0700
+Processing by SubredditsController#index as HTML
+Completed 500 Internal Server Error in 646ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `data' for <RestClient::Response 200 "{\"kind\": \"L...">:RestClient::Response):
+  
+app/controllers/subreddits_controller.rb:6:in `index'
+Started GET "/subreddits" for ::1 at 2019-07-25 16:41:39 -0700
+Processing by SubredditsController#index as HTML
+Completed 500 Internal Server Error in 610ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `data' for #<Hash:0x00007fdbbc526580>):
+  
+app/controllers/subreddits_controller.rb:7:in `index'
+Started GET "/subreddits" for ::1 at 2019-07-25 16:42:35 -0700
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/Chet/.rvm/gems/ruby-2.6.1/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by SubredditsController#index as HTML
+Completed 500 Internal Server Error in 643ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `data' for #<Hash:0x00007fbbcb757a40>):
+  
+app/controllers/subreddits_controller.rb:7:in `index'
+Started GET "/subreddits" for ::1 at 2019-07-25 16:44:05 -0700
+Processing by SubredditsController#index as HTML
+Completed 200 OK in 1001ms (Views: 29.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/subreddits" for ::1 at 2019-07-25 16:44:40 -0700
+Processing by SubredditsController#index as HTML
+Completed 500 Internal Server Error in 734ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `kind' for #<Hash:0x00007fbbcdac93e8>):
+  
+app/controllers/subreddits_controller.rb:11:in `index'
+Started GET "/subreddits" for ::1 at 2019-07-25 16:45:07 -0700
+Processing by SubredditsController#index as HTML
+Completed 200 OK in 780ms (Views: 39.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/subreddits" for ::1 at 2019-07-25 16:45:19 -0700
+Processing by SubredditsController#index as HTML
+Completed 200 OK in 617ms (Views: 21.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/subreddits" for ::1 at 2019-07-25 16:45:31 -0700
+Processing by SubredditsController#index as HTML
+Completed 500 Internal Server Error in 572ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `data' for #<Hash:0x00007fbbca1f4248>):
+  
+app/controllers/subreddits_controller.rb:11:in `index'
+Started GET "/subreddits" for ::1 at 2019-07-25 16:45:59 -0700
+Processing by SubredditsController#index as HTML
+Completed 200 OK in 500ms (Views: 18.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/subreddits" for ::1 at 2019-07-25 16:47:13 -0700
+Processing by SubredditsController#index as HTML
+Completed 200 OK in 465ms (Views: 16.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/subreddits" for ::1 at 2019-07-25 16:47:48 -0700
+Processing by SubredditsController#index as HTML
+Completed 200 OK in 575ms (Views: 31.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/subreddits" for ::1 at 2019-07-25 16:48:46 -0700
+Processing by SubredditsController#index as HTML
+Completed 200 OK in 778ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/subreddits" for ::1 at 2019-07-25 16:51:31 -0700
+  
+SyntaxError (/Users/Chet/Desktop/fsprojects/LurkrAPI/Lurkr/app/controllers/subreddits_controller.rb:14: syntax error, unexpected ':', expecting '}'
+            img: subreddit_info["thumbnail"]}
+               ^
+/Users/Chet/Desktop/fsprojects/LurkrAPI/Lurkr/app/controllers/subreddits_controller.rb:14: syntax error, unexpected '}', expecting end
+...g: subreddit_info["thumbnail"]}
+...                              ^):
+  
+app/controllers/subreddits_controller.rb:14: syntax error, unexpected ':', expecting '}'
+app/controllers/subreddits_controller.rb:14: syntax error, unexpected '}', expecting end
+Started GET "/subreddits" for ::1 at 2019-07-25 16:51:41 -0700
+Processing by SubredditsController#index as HTML
+Completed 200 OK in 932ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/subreddits" for ::1 at 2019-07-25 16:55:28 -0700
+Processing by SubredditsController#index as HTML
+Completed 200 OK in 541ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/subreddits" for ::1 at 2019-07-25 16:55:50 -0700
+Processing by SubredditsController#index as HTML
+Completed 200 OK in 427ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/subreddits" for ::1 at 2019-07-25 16:56:01 -0700
+Processing by SubredditsController#index as HTML
+Completed 200 OK in 443ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/subreddits" for ::1 at 2019-07-25 16:56:07 -0700
+Processing by SubredditsController#index as HTML
+Completed 200 OK in 682ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/subreddits" for ::1 at 2019-07-25 17:09:31 -0700
+Processing by SubredditsController#index as HTML
+Completed 204 No Content in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/subreddits" for ::1 at 2019-07-25 17:09:37 -0700
+Processing by SubredditsController#index as HTML
+Completed 204 No Content in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/subreddits" for ::1 at 2019-07-25 17:09:40 -0700
+Processing by SubredditsController#index as HTML
+Completed 204 No Content in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/subreddit" for ::1 at 2019-07-25 17:09:42 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/subreddit"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.3) lib/rack/cors.rb:95:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/subreddits" for ::1 at 2019-07-25 17:09:56 -0700
+Processing by SubredditsController#index as HTML
+Completed 204 No Content in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/subreddits/cats" for ::1 at 2019-07-25 17:10:02 -0700
+Processing by SubredditsController#show as HTML
+  Parameters: {"id"=>"cats"}
+Completed 200 OK in 455ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/subreddits/cats" for ::1 at 2019-07-25 17:10:16 -0700
+Processing by SubredditsController#show as HTML
+  Parameters: {"id"=>"cats"}
+Completed 200 OK in 602ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/subreddits/cats" for ::1 at 2019-07-25 17:11:12 -0700
+Processing by SubredditsController#show as HTML
+  Parameters: {"id"=>"cats"}
+Completed 200 OK in 468ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/subreddits/cars" for ::1 at 2019-07-25 17:11:17 -0700
+Processing by SubredditsController#show as HTML
+  Parameters: {"id"=>"cars"}
+Completed 200 OK in 461ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/subreddits/people" for ::1 at 2019-07-25 17:11:25 -0700
+Processing by SubredditsController#show as HTML
+  Parameters: {"id"=>"people"}
+Completed 500 Internal Server Error in 151ms (ActiveRecord: 0.0ms)
+
+
+  
+RestClient::Forbidden (403 Forbidden):
+  
+app/controllers/subreddits_controller.rb:13:in `show'
+Started GET "/subreddits/music" for ::1 at 2019-07-25 17:12:01 -0700
+Processing by SubredditsController#show as HTML
+  Parameters: {"id"=>"music"}
+Completed 200 OK in 560ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/subreddits/programmerjokes" for ::1 at 2019-07-25 17:12:08 -0700
+Processing by SubredditsController#show as HTML
+  Parameters: {"id"=>"programmerjokes"}
+Completed 200 OK in 264ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/subreddits/programmerjokes" for ::1 at 2019-07-25 17:13:02 -0700
+Processing by SubredditsController#show as HTML
+  Parameters: {"id"=>"programmerjokes"}
+Completed 200 OK in 192ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/subreddits/programmerjokes" for ::1 at 2019-07-25 17:17:41 -0700
+Processing by SubredditsController#show as HTML
+  Parameters: {"id"=>"programmerjokes"}
+Completed 200 OK in 209ms (Views: 4.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/subreddits/programmerjokes" for ::1 at 2019-07-25 17:19:28 -0700
+Processing by SubredditsController#show as HTML
+  Parameters: {"id"=>"programmerjokes"}
+Completed 200 OK in 194ms (Views: 0.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/subreddits/programmerjokes" for ::1 at 2019-07-25 17:21:46 -0700
+Processing by SubredditsController#show as HTML
+  Parameters: {"id"=>"programmerjokes"}
+Completed 200 OK in 172ms (Views: 0.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/subreddits/programmerjokes" for ::1 at 2019-07-25 17:21:58 -0700
+Processing by SubredditsController#show as HTML
+  Parameters: {"id"=>"programmerjokes"}
+Completed 200 OK in 206ms (Views: 0.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/subreddits/hotcars" for ::1 at 2019-07-25 17:22:27 -0700
+Processing by SubredditsController#show as HTML
+  Parameters: {"id"=>"hotcars"}
+Completed 500 Internal Server Error in 186ms (ActiveRecord: 0.0ms)
+
+
+  
+RestClient::NotFound (404 Not Found):
+  
+app/controllers/subreddits_controller.rb:13:in `show'
+Started GET "/subreddits/cats" for ::1 at 2019-07-25 17:23:01 -0700
+Processing by SubredditsController#show as HTML
+  Parameters: {"id"=>"cats"}
+Completed 200 OK in 667ms (Views: 1.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/subreddits/cats" for ::1 at 2019-07-25 17:44:51 -0700
+Processing by SubredditsController#show as HTML
+  Parameters: {"id"=>"cats"}
+Completed 200 OK in 738ms (Views: 1.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/subreddits/cars" for ::1 at 2019-07-25 17:45:07 -0700
+Processing by SubredditsController#show as HTML
+  Parameters: {"id"=>"cars"}
+Completed 200 OK in 463ms (Views: 2.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/subreddits/cars" for ::1 at 2019-07-26 09:40:42 -0700
+Processing by SubredditsController#show as HTML
+  Parameters: {"id"=>"cars"}
+Completed 200 OK in 970ms (Views: 4.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/subreddits/cars" for ::1 at 2019-07-26 09:40:55 -0700
+Processing by SubredditsController#show as HTML
+  Parameters: {"id"=>"cars"}
+Completed 200 OK in 524ms (Views: 1.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/subreddits/cats" for ::1 at 2019-07-26 09:41:17 -0700
+Processing by SubredditsController#show as HTML
+  Parameters: {"id"=>"cats"}
+Completed 200 OK in 554ms (Views: 1.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/subreddits/cars" for ::1 at 2019-07-26 09:45:08 -0700
+Processing by SubredditsController#show as HTML
+  Parameters: {"id"=>"cars"}
+Completed 200 OK in 491ms (Views: 0.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/subreddits/cats" for ::1 at 2019-07-26 09:47:53 -0700
+Processing by SubredditsController#show as HTML
+  Parameters: {"id"=>"cats"}
+Completed 200 OK in 844ms (Views: 0.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/subreddits/cars" for ::1 at 2019-07-26 09:48:38 -0700
+Processing by SubredditsController#show as HTML
+  Parameters: {"id"=>"cars"}
+Completed 200 OK in 636ms (Views: 1.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/subreddits/cars" for ::1 at 2019-07-26 09:59:12 -0700
+Processing by SubredditsController#show as HTML
+  Parameters: {"id"=>"cars"}
+Completed 200 OK in 697ms (Views: 2.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/subreddits/cars" for ::1 at 2019-07-26 09:59:32 -0700
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/Chet/.rvm/gems/ruby-2.6.1/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by SubredditsController#show as HTML
+  Parameters: {"id"=>"cars"}
+Completed 200 OK in 531ms (Views: 2.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/subreddits/cars" for ::1 at 2019-07-26 09:59:53 -0700
+Processing by SubredditsController#show as HTML
+  Parameters: {"id"=>"cars"}
+Completed 200 OK in 619ms (Views: 2.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/subreddits/cars" for ::1 at 2019-07-26 10:02:29 -0700
+Processing by SubredditsController#show as HTML
+  Parameters: {"id"=>"cars"}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+
+
+  
+ArgumentError (wrong number of arguments (given 0, expected 1)):
+  
+app/models/subreddit.rb:8:in `getSubredditPosts'
+app/controllers/subreddits_controller.rb:43:in `show'
+Started GET "/subreddits/cars" for ::1 at 2019-07-26 10:02:40 -0700
+Processing by SubredditsController#show as HTML
+  Parameters: {"id"=>"cars"}
+Completed 500 Internal Server Error in 21ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (undefined local variable or method `subredditName' for #<Class:0x00007fe52ea23c10>):
+  
+app/models/subreddit.rb:9:in `getSubredditPosts'
+app/controllers/subreddits_controller.rb:43:in `show'
+Started GET "/subreddits/cars" for ::1 at 2019-07-26 10:02:42 -0700
+Processing by SubredditsController#show as HTML
+  Parameters: {"id"=>"cars"}
+Completed 500 Internal Server Error in 21ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (undefined local variable or method `subredditName' for #<Class:0x00007fe52ea23c10>):
+  
+app/models/subreddit.rb:9:in `getSubredditPosts'
+app/controllers/subreddits_controller.rb:43:in `show'
+Started GET "/subreddits/cars" for ::1 at 2019-07-26 10:02:57 -0700
+Processing by SubredditsController#show as HTML
+  Parameters: {"id"=>"cars"}
+Completed 500 Internal Server Error in 667ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (undefined local variable or method `response' for #<Class:0x00007fe531945390>
+Did you mean?  respond_to?):
+  
+app/models/subreddit.rb:13:in `getSubredditPosts'
+app/controllers/subreddits_controller.rb:43:in `show'
+Started GET "/subreddits/cars" for ::1 at 2019-07-26 10:03:13 -0700
+Processing by SubredditsController#show as HTML
+  Parameters: {"id"=>"cars"}
+Completed 200 OK in 583ms (Views: 1.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/subreddits/cars" for ::1 at 2019-07-26 10:05:33 -0700
+Processing by SubredditsController#show as HTML
+  Parameters: {"id"=>"cars"}
+Completed 200 OK in 540ms (Views: 1.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/subreddits/animals" for ::1 at 2019-07-26 10:05:38 -0700
+Processing by SubredditsController#show as HTML
+  Parameters: {"id"=>"animals"}
+Completed 200 OK in 632ms (Views: 2.9ms | ActiveRecord: 0.0ms)
+
+
