@@ -2622,3 +2622,172 @@ Processing by SubredditsController#show as HTML
 Completed 200 OK in 632ms (Views: 2.9ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/subreddits/animals" for ::1 at 2019-07-26 10:09:45 -0700
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/Chet/.rvm/gems/ruby-2.6.1/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by SubredditsController#show as HTML
+  Parameters: {"name"=>"animals"}
+Completed 200 OK in 551ms (Views: 1.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/subreddits/animals" for ::1 at 2019-07-26 10:10:03 -0700
+  [1m[35m (2.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/Chet/.rvm/gems/ruby-2.6.1/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by SubredditsController#show as HTML
+  Parameters: {"name"=>"animals"}
+Completed 200 OK in 511ms (Views: 1.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/subreddits/animals" for ::1 at 2019-07-26 10:11:25 -0700
+Processing by SubredditsController#show as HTML
+  Parameters: {"name"=>"animals"}
+Completed 200 OK in 530ms (Views: 3.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/subreddits/animals" for ::1 at 2019-07-26 10:11:53 -0700
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/Chet/.rvm/gems/ruby-2.6.1/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by SubredditsController#show as HTML
+  Parameters: {"name"=>"animals"}
+Completed 200 OK in 509ms (Views: 1.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/subreddits/animals" for ::1 at 2019-07-26 10:12:04 -0700
+Processing by SubredditsController#show as HTML
+  Parameters: {"name"=>"animals"}
+Completed 200 OK in 594ms (Views: 1.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/subreddits/users" for ::1 at 2019-07-26 10:15:27 -0700
+  [1m[35m (3.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/Chet/.rvm/gems/ruby-2.6.1/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by SubredditsController#show as HTML
+  Parameters: {"name"=>"users"}
+Completed 200 OK in 473ms (Views: 1.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for ::1 at 2019-07-26 10:15:35 -0700
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:4
+Completed 200 OK in 62ms (Views: 19.9ms | ActiveRecord: 23.4ms)
+
+
+Started GET "/users" for ::1 at 2019-07-26 10:19:10 -0700
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:11
+Completed 200 OK in 21ms (Views: 0.1ms | ActiveRecord: 9.5ms)
+
+
+Started GET "/users" for ::1 at 2019-07-26 10:19:41 -0700
+  
+SyntaxError (/Users/Chet/Desktop/fsprojects/LurkrAPI/Lurkr/app/controllers/users_controller.rb:16: syntax error, unexpected '\n', expecting =>):
+  
+app/controllers/users_controller.rb:16: syntax error, unexpected '\n', expecting =>
+Started GET "/users" for ::1 at 2019-07-26 10:20:15 -0700
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:11
+  [1m[36mSubreddit Load (0.8ms)[0m  [1m[34mSELECT "subreddits".* FROM "subreddits" INNER JOIN "subscriptions" ON "subreddits"."id" = "subscriptions"."subreddit_id" WHERE "subscriptions"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:15
+Completed 200 OK in 105ms (Views: 0.1ms | ActiveRecord: 15.9ms)
+
+
+Started GET "/users" for ::1 at 2019-07-26 10:20:37 -0700
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:11
+  [1m[36mSubreddit Load (0.7ms)[0m  [1m[34mSELECT "subreddits".* FROM "subreddits" INNER JOIN "subscriptions" ON "subreddits"."id" = "subscriptions"."subreddit_id" WHERE "subscriptions"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:15
+Completed 200 OK in 43ms (Views: 0.1ms | ActiveRecord: 17.6ms)
+
+
+Started GET "/users" for ::1 at 2019-07-26 10:20:44 -0700
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:11
+  [1m[36mSubreddit Load (1.2ms)[0m  [1m[34mSELECT "subreddits".* FROM "subreddits" INNER JOIN "subscriptions" ON "subreddits"."id" = "subscriptions"."subreddit_id" WHERE "subscriptions"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:15
+Completed 200 OK in 64ms (Views: 0.1ms | ActiveRecord: 18.4ms)
+
+
+Started GET "/users" for ::1 at 2019-07-26 10:21:32 -0700
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:11
+Completed 500 Internal Server Error in 150ms (ActiveRecord: 7.0ms)
+
+
+  
+NameError (undefined local variable or method `except' for #<UsersController:0x00007f85d94d1dc0>
+Did you mean?  exec):
+  
+app/controllers/users_controller.rb:17:in `index'
+Started GET "/users" for ::1 at 2019-07-26 10:21:46 -0700
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:11
+  [1m[36mSubreddit Load (0.4ms)[0m  [1m[34mSELECT "subreddits".* FROM "subreddits" INNER JOIN "subscriptions" ON "subreddits"."id" = "subscriptions"."subreddit_id" WHERE "subscriptions"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:15
+Completed 200 OK in 37ms (Views: 0.1ms | ActiveRecord: 15.6ms)
+
+
+Started GET "/users" for ::1 at 2019-07-26 10:22:00 -0700
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:11
+  [1m[36mSubreddit Load (0.5ms)[0m  [1m[34mSELECT "subreddits".* FROM "subreddits" INNER JOIN "subscriptions" ON "subreddits"."id" = "subscriptions"."subreddit_id" WHERE "subscriptions"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:15
+Completed 200 OK in 42ms (Views: 0.1ms | ActiveRecord: 14.8ms)
+
+
+Started GET "/users" for ::1 at 2019-07-26 10:30:31 -0700
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:11
+  [1m[36mSubreddit Load (1.1ms)[0m  [1m[34mSELECT "subreddits".* FROM "subreddits" INNER JOIN "subscriptions" ON "subreddits"."id" = "subscriptions"."subreddit_id" WHERE "subscriptions"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:15
+Completed 200 OK in 7ms (Views: 0.1ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/users/1" for ::1 at 2019-07-26 10:31:17 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:20
+  [1m[36mSubreddit Load (0.6ms)[0m  [1m[34mSELECT "subreddits".* FROM "subreddits" INNER JOIN "subscriptions" ON "subreddits"."id" = "subscriptions"."subreddit_id" WHERE "subscriptions"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:21
+Completed 200 OK in 47ms (Views: 0.2ms | ActiveRecord: 19.6ms)
+
+
+Started GET "/users/2" for ::1 at 2019-07-26 10:31:20 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:20
+Completed 200 OK in 5ms (Views: 0.1ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/users/2" for ::1 at 2019-07-26 10:35:28 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:6
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/models/user.rb:10
+Completed 200 OK in 12ms (Views: 0.1ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/users/1" for ::1 at 2019-07-26 10:35:31 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:6
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:10
+  [1m[36mSubreddit Load (2.4ms)[0m  [1m[34mSELECT "subreddits".* FROM "subreddits" INNER JOIN "subscriptions" ON "subreddits"."id" = "subscriptions"."subreddit_id" WHERE "subscriptions"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/models/user.rb:12
+Completed 200 OK in 99ms (Views: 0.3ms | ActiveRecord: 32.4ms)
+
+
