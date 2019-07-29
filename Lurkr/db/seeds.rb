@@ -15,6 +15,8 @@ sr2 = Subreddit.create(name: "jokes");
 sr3 = Subreddit.create(name: "houses");
 sr4 = Subreddit.create(name: "baseball");
 sr5 = Subreddit.create(name: "fame");
+sr6 = Subreddit.create(name: "cats");
+
 
 sb1 = Subscription.create(user_id: u1.id, subreddit_id: sr1.id);
 sb2 = Subscription.create(user_id: u1.id, subreddit_id: sr2.id);
@@ -22,6 +24,11 @@ sb3 = Subscription.create(user_id: u2.id, subreddit_id: sr3.id);
 sb4 = Subscription.create(user_id: u3.id, subreddit_id: sr3.id);
 sb5 = Subscription.create(user_id: u3.id, subreddit_id: sr4.id);
 sb6 = Subscription.create(user_id: u3.id, subreddit_id: sr5.id);
+
+sb7 = Subscription.create(user_id: u1.id, subreddit_id: sr6.id);
+
+
+
 
 set1 = Setting.create(user_id: u1.id, num_records: 5);
 set2 = Setting.create(user_id: u2.id, num_records: 10);
