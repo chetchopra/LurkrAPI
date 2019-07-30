@@ -6,5 +6,15 @@ class UsersController < ApplicationController
     render json: User.getUserInfo(params[:id])
   end 
 
+  def checkForUser
+    # byebug
+    user = User.find_by(username: params["username"])
+    if user
+      render json: user
+    else 
+      render json: {"message": "User does not exist"}
+    end
+  end
+
 
 end
