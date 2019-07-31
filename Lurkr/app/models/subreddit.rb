@@ -11,7 +11,9 @@ class Subreddit < ApplicationRecord
     # Traverses to the children (posts) in the response JSON
     subredditPosts = parsedResponse["data"]["children"]
 
-    # TO-DO: Add in code to capture and handle errors 
+    # TO-DO: Add in code to capture and handle errors
+    
+    
 
     return self.extractPosts(subredditPosts)
 
@@ -45,6 +47,7 @@ class Subreddit < ApplicationRecord
 
   def self.extractPosts(subredditPosts)
     posts = []
+    
     subredditPosts.each do |post|
       posts << {title: post["data"]["title"],
                 img: post["data"]["thumbnail"],
@@ -54,10 +57,31 @@ class Subreddit < ApplicationRecord
                 self_text: post["data"]["selftext"],
                 up_votes: post["data"]["ups"],
                 permalink: post["data"]["permalink"],
-                
+                imageInfo: post["data"]["preview"],
+                subredditName: post["data"]["subreddit"]        
         }
     end
     return posts
+  end
+
+
+  def self.getOneSubredditPost(linkToPost)
+    url = "http://reddit.com#{linkToPost}.json"
+    parsedResponse = JSON.parse(RestClient.get(url))
+    result = self.extractPostData(parsedResponse)
+    return result
+  end
+
+  def self.extractPostData(post)
+    postData = {}
+    postData[:title] = post[0]["data"]["children"][0]["data"]["title"]
+    postData[:selftext] = post[0]["data"]["children"][0]["data"]["selftext"]
+    postData[:num_comments] = post[0]["data"]["children"][0]["data"]["num_comments"]
+    postData[:title] = post[0]["data"]["children"][0]["data"]["title"]
+    postData[:up_votes] = post[0]["data"]["children"][0]["data"]["ups"]
+    postData[:images] = post[0]["data"]["children"][0]["data"]["preview"]
+    postData[:author] = post[0]["data"]["children"][0]["data"]["author"]
+    return postData
   end
 
 end

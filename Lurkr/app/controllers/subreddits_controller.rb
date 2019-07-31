@@ -12,6 +12,12 @@ class SubredditsController < ApplicationController
     render json: {"name": subredditName}
   end
 
+  def showPost
+    linkToPost = params["url"]
+    post = Subreddit.getOneSubredditPost(linkToPost)
+    render json: post
+  end
+
   def destroy
     subreddit = Subreddit.find_by(name: subredditParams["name"])
     subscriptionToRemove = Subscription.find_by(subreddit_id: subreddit.id, user_id: subredditParams["user_id"])

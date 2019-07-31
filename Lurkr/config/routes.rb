@@ -9,6 +9,8 @@ Rails.application.routes.draw do
   get '/subreddits/:name', to: 'subreddits#show'
   post '/subreddits', to: 'subreddits#create'
   delete '/subreddits', to: 'subreddits#destroy'
+  get '/subredditspost', to: 'subreddits#showPost'
+  
 
   # Custom routes for users
   get '/users/:id', to: 'users#show'
