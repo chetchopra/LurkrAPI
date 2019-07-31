@@ -48597,3 +48597,447 @@ Completed 200 OK in 717ms (Views: 2.0ms | ActiveRecord: 0.0ms)
 Completed 200 OK in 751ms (Views: 27.1ms | ActiveRecord: 0.0ms)
 
 
+Started DELETE "/subreddits" for ::1 at 2019-07-31 13:22:20 -0700
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/Chet/.rvm/gems/ruby-2.6.1/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by SubredditsController#destroy as JSON
+  Parameters: {"subreddit"=>{"name"=>"jokes", "user_id"=>"1"}}
+  [1m[36mSubreddit Load (0.5ms)[0m  [1m[34mSELECT  "subreddits".* FROM "subreddits" WHERE "subreddits"."name" = $1 LIMIT $2[0m  [["name", "jokes"], ["LIMIT", 1]]
+  ↳ app/controllers/subreddits_controller.rb:22
+  [1m[36mSubscription Load (0.5ms)[0m  [1m[34mSELECT  "subscriptions".* FROM "subscriptions" WHERE "subscriptions"."subreddit_id" = $1 AND "subscriptions"."user_id" = $2 LIMIT $3[0m  [["subreddit_id", 2], ["user_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/subreddits_controller.rb:23
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/subreddits_controller.rb:25
+  [1m[36mSubscription Destroy (0.8ms)[0m  [1m[31mDELETE FROM "subscriptions" WHERE "subscriptions"."id" = $1[0m  [["id", 2]]
+  ↳ app/controllers/subreddits_controller.rb:25
+  [1m[35m (39.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/subreddits_controller.rb:25
+Completed 200 OK in 79ms (Views: 0.3ms | ActiveRecord: 57.1ms)
+
+
+Started GET "/users/1" for ::1 at 2019-07-31 13:22:50 -0700
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:10
+  [1m[36mSubreddit Load (0.8ms)[0m  [1m[34mSELECT "subreddits".* FROM "subreddits" INNER JOIN "subscriptions" ON "subreddits"."id" = "subscriptions"."subreddit_id" WHERE "subscriptions"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/models/user.rb:12
+Completed 200 OK in 43ms (Views: 0.2ms | ActiveRecord: 7.7ms)
+
+
+Started GET "/subreddits/cars" for ::1 at 2019-07-31 13:22:50 -0700
+Started GET "/subreddits/cats" for ::1 at 2019-07-31 13:22:50 -0700
+Processing by SubredditsController#show as */*
+  Parameters: {"name"=>"cars"}
+Processing by SubredditsController#show as */*
+  Parameters: {"name"=>"cats"}
+Completed 200 OK in 578ms (Views: 4.1ms | ActiveRecord: 0.0ms)
+
+
+Completed 200 OK in 760ms (Views: 12.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/1" for ::1 at 2019-07-31 13:22:55 -0700
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:10
+  [1m[36mSubreddit Load (2.0ms)[0m  [1m[34mSELECT "subreddits".* FROM "subreddits" INNER JOIN "subscriptions" ON "subreddits"."id" = "subscriptions"."subreddit_id" WHERE "subscriptions"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/models/user.rb:12
+Completed 200 OK in 11ms (Views: 0.1ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/subreddits/cars" for ::1 at 2019-07-31 13:22:56 -0700
+Started GET "/subreddits/cats" for ::1 at 2019-07-31 13:22:56 -0700
+Processing by SubredditsController#show as */*
+  Parameters: {"name"=>"cars"}
+Processing by SubredditsController#show as */*
+  Parameters: {"name"=>"cats"}
+Completed 200 OK in 776ms (Views: 7.2ms | ActiveRecord: 0.0ms)
+
+
+Completed 200 OK in 906ms (Views: 6.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/1" for ::1 at 2019-07-31 13:23:34 -0700
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:10
+  [1m[36mSubreddit Load (0.8ms)[0m  [1m[34mSELECT "subreddits".* FROM "subreddits" INNER JOIN "subscriptions" ON "subreddits"."id" = "subscriptions"."subreddit_id" WHERE "subscriptions"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/models/user.rb:12
+Completed 200 OK in 5ms (Views: 0.2ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/subreddits/cars" for ::1 at 2019-07-31 13:23:34 -0700
+Started GET "/subreddits/cats" for ::1 at 2019-07-31 13:23:34 -0700
+Processing by SubredditsController#show as */*
+  Parameters: {"name"=>"cars"}
+Processing by SubredditsController#show as */*
+  Parameters: {"name"=>"cats"}
+Completed 200 OK in 647ms (Views: 2.3ms | ActiveRecord: 0.0ms)
+
+
+Completed 200 OK in 815ms (Views: 25.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/1" for ::1 at 2019-07-31 13:23:42 -0700
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:10
+  [1m[36mSubreddit Load (0.7ms)[0m  [1m[34mSELECT "subreddits".* FROM "subreddits" INNER JOIN "subscriptions" ON "subreddits"."id" = "subscriptions"."subreddit_id" WHERE "subscriptions"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/models/user.rb:12
+Completed 200 OK in 4ms (Views: 0.1ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/subreddits/cars" for ::1 at 2019-07-31 13:23:42 -0700
+Started GET "/subreddits/cats" for ::1 at 2019-07-31 13:23:42 -0700
+Processing by SubredditsController#show as */*
+Processing by SubredditsController#show as */*
+  Parameters: {"name"=>"cars"}
+  Parameters: {"name"=>"cats"}
+Completed 200 OK in 551ms (Views: 2.3ms | ActiveRecord: 0.0ms)
+
+
+Completed 200 OK in 620ms (Views: 14.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/1" for ::1 at 2019-07-31 13:23:57 -0700
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:10
+  [1m[36mSubreddit Load (2.7ms)[0m  [1m[34mSELECT "subreddits".* FROM "subreddits" INNER JOIN "subscriptions" ON "subreddits"."id" = "subscriptions"."subreddit_id" WHERE "subscriptions"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/models/user.rb:12
+Completed 200 OK in 6ms (Views: 0.1ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/subreddits/cars" for ::1 at 2019-07-31 13:23:57 -0700
+Started GET "/subreddits/cats" for ::1 at 2019-07-31 13:23:57 -0700
+Processing by SubredditsController#show as */*
+Processing by SubredditsController#show as */*
+  Parameters: {"name"=>"cars"}
+  Parameters: {"name"=>"cats"}
+Completed 200 OK in 539ms (Views: 3.9ms | ActiveRecord: 0.0ms)
+
+
+Completed 200 OK in 628ms (Views: 12.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/1" for ::1 at 2019-07-31 13:30:23 -0700
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:10
+  [1m[36mSubreddit Load (1.9ms)[0m  [1m[34mSELECT "subreddits".* FROM "subreddits" INNER JOIN "subscriptions" ON "subreddits"."id" = "subscriptions"."subreddit_id" WHERE "subscriptions"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/models/user.rb:12
+Completed 200 OK in 9ms (Views: 0.1ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/subreddits/cars" for ::1 at 2019-07-31 13:30:23 -0700
+Processing by SubredditsController#show as */*
+  Parameters: {"name"=>"cars"}
+Started GET "/subreddits/cats" for ::1 at 2019-07-31 13:30:23 -0700
+Processing by SubredditsController#show as */*
+  Parameters: {"name"=>"cats"}
+Completed 200 OK in 591ms (Views: 28.3ms | ActiveRecord: 0.0ms)
+
+
+Completed 200 OK in 684ms (Views: 4.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/1" for ::1 at 2019-07-31 13:31:05 -0700
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:10
+  [1m[36mSubreddit Load (4.8ms)[0m  [1m[34mSELECT "subreddits".* FROM "subreddits" INNER JOIN "subscriptions" ON "subreddits"."id" = "subscriptions"."subreddit_id" WHERE "subscriptions"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/models/user.rb:12
+Completed 200 OK in 10ms (Views: 0.5ms | ActiveRecord: 6.2ms)
+
+
+Started GET "/subreddits/cars" for ::1 at 2019-07-31 13:31:05 -0700
+Processing by SubredditsController#show as */*
+  Parameters: {"name"=>"cars"}
+Started GET "/subreddits/cats" for ::1 at 2019-07-31 13:31:05 -0700
+Processing by SubredditsController#show as */*
+  Parameters: {"name"=>"cats"}
+Completed 200 OK in 672ms (Views: 5.0ms | ActiveRecord: 0.0ms)
+
+
+Completed 200 OK in 693ms (Views: 15.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/1" for ::1 at 2019-07-31 13:31:34 -0700
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:10
+  [1m[36mSubreddit Load (2.0ms)[0m  [1m[34mSELECT "subreddits".* FROM "subreddits" INNER JOIN "subscriptions" ON "subreddits"."id" = "subscriptions"."subreddit_id" WHERE "subscriptions"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/models/user.rb:12
+Completed 200 OK in 228ms (Views: 0.1ms | ActiveRecord: 166.1ms)
+
+
+Started GET "/subreddits/cars" for ::1 at 2019-07-31 13:31:35 -0700
+Started GET "/subreddits/cats" for ::1 at 2019-07-31 13:31:35 -0700
+Processing by SubredditsController#show as */*
+  Parameters: {"name"=>"cars"}
+Processing by SubredditsController#show as */*
+  Parameters: {"name"=>"cats"}
+Completed 200 OK in 957ms (Views: 2.7ms | ActiveRecord: 0.0ms)
+
+
+Completed 200 OK in 968ms (Views: 7.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/1" for ::1 at 2019-07-31 13:31:57 -0700
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:10
+  [1m[36mSubreddit Load (0.7ms)[0m  [1m[34mSELECT "subreddits".* FROM "subreddits" INNER JOIN "subscriptions" ON "subreddits"."id" = "subscriptions"."subreddit_id" WHERE "subscriptions"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/models/user.rb:12
+Completed 200 OK in 4ms (Views: 0.1ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/subreddits/cars" for ::1 at 2019-07-31 13:31:58 -0700
+Started GET "/subreddits/cats" for ::1 at 2019-07-31 13:31:58 -0700
+Processing by SubredditsController#show as */*
+  Parameters: {"name"=>"cars"}
+Processing by SubredditsController#show as */*
+  Parameters: {"name"=>"cats"}
+Completed 200 OK in 787ms (Views: 27.6ms | ActiveRecord: 0.0ms)
+
+
+Completed 200 OK in 863ms (Views: 17.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/1" for ::1 at 2019-07-31 13:32:28 -0700
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:10
+  [1m[36mSubreddit Load (1.0ms)[0m  [1m[34mSELECT "subreddits".* FROM "subreddits" INNER JOIN "subscriptions" ON "subreddits"."id" = "subscriptions"."subreddit_id" WHERE "subscriptions"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/models/user.rb:12
+Completed 200 OK in 5ms (Views: 0.2ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/subreddits/cars" for ::1 at 2019-07-31 13:32:28 -0700
+Started GET "/subreddits/cats" for ::1 at 2019-07-31 13:32:28 -0700
+Processing by SubredditsController#show as */*
+  Parameters: {"name"=>"cars"}
+Processing by SubredditsController#show as */*
+  Parameters: {"name"=>"cats"}
+Completed 200 OK in 635ms (Views: 3.8ms | ActiveRecord: 0.0ms)
+
+
+Completed 200 OK in 725ms (Views: 29.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/login/fhadskjfl" for ::1 at 2019-07-31 13:32:36 -0700
+Processing by UsersController#checkForUser as */*
+  Parameters: {"username"=>"fhadskjfl"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "fhadskjfl"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:11
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/login/jsmoke" for ::1 at 2019-07-31 13:32:40 -0700
+Processing by UsersController#checkForUser as */*
+  Parameters: {"username"=>"jsmoke"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "jsmoke"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:11
+Completed 200 OK in 1ms (Views: 0.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/3" for ::1 at 2019-07-31 13:32:40 -0700
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/models/user.rb:10
+  [1m[36mSubreddit Load (0.6ms)[0m  [1m[34mSELECT "subreddits".* FROM "subreddits" INNER JOIN "subscriptions" ON "subreddits"."id" = "subscriptions"."subreddit_id" WHERE "subscriptions"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/models/user.rb:12
+Completed 200 OK in 4ms (Views: 0.1ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/subreddits/houses" for ::1 at 2019-07-31 13:32:40 -0700
+Processing by SubredditsController#show as */*
+  Parameters: {"name"=>"houses"}
+Completed 200 OK in 975ms (Views: 5.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/subreddits" for ::1 at 2019-07-31 13:32:44 -0700
+Processing by SubredditsController#create as JSON
+  Parameters: {"subreddit"=>{"name"=>"cats", "user_id"=>3}}
+  [1m[36mSubreddit Load (0.3ms)[0m  [1m[34mSELECT  "subreddits".* FROM "subreddits" WHERE "subreddits"."name" = $1 LIMIT $2[0m  [["name", "cats"], ["LIMIT", 1]]
+  ↳ app/models/subreddit.rb:30
+  [1m[36mSubscription Load (0.3ms)[0m  [1m[34mSELECT  "subscriptions".* FROM "subscriptions" WHERE "subscriptions"."subreddit_id" = $1 AND "subscriptions"."user_id" = $2 LIMIT $3[0m  [["subreddit_id", 5], ["user_id", 3], ["LIMIT", 1]]
+  ↳ app/models/subreddit.rb:32
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/subscription.rb:7
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/models/subscription.rb:7
+  [1m[36mSubreddit Load (0.3ms)[0m  [1m[34mSELECT  "subreddits".* FROM "subreddits" WHERE "subreddits"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/models/subscription.rb:7
+  [1m[36mSubscription Create (0.7ms)[0m  [1m[32mINSERT INTO "subscriptions" ("user_id", "subreddit_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 3], ["subreddit_id", 5], ["created_at", "2019-07-31 20:32:45.596705"], ["updated_at", "2019-07-31 20:32:45.596705"]]
+  ↳ app/models/subscription.rb:7
+  [1m[35m (40.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/subscription.rb:7
+Completed 200 OK in 647ms (Views: 0.1ms | ActiveRecord: 42.9ms)
+
+
+Started GET "/subreddits/cats" for ::1 at 2019-07-31 13:32:45 -0700
+Processing by SubredditsController#show as */*
+  Parameters: {"name"=>"cats"}
+Completed 200 OK in 742ms (Views: 8.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/login/jsmith" for ::1 at 2019-07-31 13:32:52 -0700
+Processing by UsersController#checkForUser as */*
+  Parameters: {"username"=>"jsmith"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "jsmith"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:11
+Completed 200 OK in 2ms (Views: 0.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/2" for ::1 at 2019-07-31 13:32:52 -0700
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/models/user.rb:10
+  [1m[36mSubreddit Load (0.5ms)[0m  [1m[34mSELECT "subreddits".* FROM "subreddits" INNER JOIN "subscriptions" ON "subreddits"."id" = "subscriptions"."subreddit_id" WHERE "subscriptions"."user_id" = $1[0m  [["user_id", 2]]
+  ↳ app/models/user.rb:12
+Completed 200 OK in 4ms (Views: 0.1ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/subreddits/houses" for ::1 at 2019-07-31 13:32:52 -0700
+Processing by SubredditsController#show as */*
+  Parameters: {"name"=>"houses"}
+Completed 200 OK in 657ms (Views: 8.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/subreddits" for ::1 at 2019-07-31 13:32:56 -0700
+Processing by SubredditsController#create as JSON
+  Parameters: {"subreddit"=>{"name"=>"dogs", "user_id"=>2}}
+  [1m[36mSubreddit Load (0.4ms)[0m  [1m[34mSELECT  "subreddits".* FROM "subreddits" WHERE "subreddits"."name" = $1 LIMIT $2[0m  [["name", "dogs"], ["LIMIT", 1]]
+  ↳ app/models/subreddit.rb:30
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/subreddit.rb:39
+  [1m[36mSubreddit Create (8.5ms)[0m  [1m[32mINSERT INTO "subreddits" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "dogs"], ["created_at", "2019-07-31 20:32:56.796920"], ["updated_at", "2019-07-31 20:32:56.796920"]]
+  ↳ app/models/subreddit.rb:39
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/subreddit.rb:39
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/subscription.rb:7
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/models/subscription.rb:7
+  [1m[36mSubreddit Load (0.3ms)[0m  [1m[34mSELECT  "subreddits".* FROM "subreddits" WHERE "subreddits"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/models/subscription.rb:7
+  [1m[36mSubscription Create (0.4ms)[0m  [1m[32mINSERT INTO "subscriptions" ("user_id", "subreddit_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 2], ["subreddit_id", 6], ["created_at", "2019-07-31 20:32:56.810921"], ["updated_at", "2019-07-31 20:32:56.810921"]]
+  ↳ app/models/subscription.rb:7
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/subscription.rb:7
+Completed 200 OK in 636ms (Views: 0.2ms | ActiveRecord: 11.2ms)
+
+
+Started GET "/subreddits/dogs" for ::1 at 2019-07-31 13:32:56 -0700
+Processing by SubredditsController#show as */*
+  Parameters: {"name"=>"dogs"}
+Completed 200 OK in 521ms (Views: 5.0ms | ActiveRecord: 0.0ms)
+
+
+Started DELETE "/subreddits" for ::1 at 2019-07-31 13:32:58 -0700
+Processing by SubredditsController#destroy as JSON
+  Parameters: {"subreddit"=>{"name"=>"houses", "user_id"=>2}}
+  [1m[36mSubreddit Load (0.4ms)[0m  [1m[34mSELECT  "subreddits".* FROM "subreddits" WHERE "subreddits"."name" = $1 LIMIT $2[0m  [["name", "houses"], ["LIMIT", 1]]
+  ↳ app/controllers/subreddits_controller.rb:22
+  [1m[36mSubscription Load (0.3ms)[0m  [1m[34mSELECT  "subscriptions".* FROM "subscriptions" WHERE "subscriptions"."subreddit_id" = $1 AND "subscriptions"."user_id" = $2 LIMIT $3[0m  [["subreddit_id", 3], ["user_id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/subreddits_controller.rb:23
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/subreddits_controller.rb:25
+  [1m[36mSubscription Destroy (0.5ms)[0m  [1m[31mDELETE FROM "subscriptions" WHERE "subscriptions"."id" = $1[0m  [["id", 3]]
+  ↳ app/controllers/subreddits_controller.rb:25
+  [1m[35m (8.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/subreddits_controller.rb:25
+Completed 200 OK in 13ms (Views: 0.2ms | ActiveRecord: 9.6ms)
+
+
+Started GET "/users/login/jsnoke" for ::1 at 2019-07-31 13:33:03 -0700
+Processing by UsersController#checkForUser as */*
+  Parameters: {"username"=>"jsnoke"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "jsnoke"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:11
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/login/jsmoke" for ::1 at 2019-07-31 13:33:09 -0700
+Processing by UsersController#checkForUser as */*
+  Parameters: {"username"=>"jsmoke"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "jsmoke"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:11
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/3" for ::1 at 2019-07-31 13:33:09 -0700
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/models/user.rb:10
+  [1m[36mSubreddit Load (0.5ms)[0m  [1m[34mSELECT "subreddits".* FROM "subreddits" INNER JOIN "subscriptions" ON "subreddits"."id" = "subscriptions"."subreddit_id" WHERE "subscriptions"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/models/user.rb:12
+Completed 200 OK in 3ms (Views: 0.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/subreddits/houses" for ::1 at 2019-07-31 13:33:09 -0700
+Started GET "/subreddits/cats" for ::1 at 2019-07-31 13:33:09 -0700
+Processing by SubredditsController#show as */*
+  Parameters: {"name"=>"houses"}
+Processing by SubredditsController#show as */*
+  Parameters: {"name"=>"cats"}
+Completed 200 OK in 1125ms (Views: 5.2ms | ActiveRecord: 0.0ms)
+
+
+Completed 200 OK in 1151ms (Views: 24.5ms | ActiveRecord: 0.0ms)
+
+
+Started DELETE "/subreddits" for ::1 at 2019-07-31 13:33:12 -0700
+Processing by SubredditsController#destroy as JSON
+  Parameters: {"subreddit"=>{"name"=>"houses", "user_id"=>3}}
+  [1m[36mSubreddit Load (0.3ms)[0m  [1m[34mSELECT  "subreddits".* FROM "subreddits" WHERE "subreddits"."name" = $1 LIMIT $2[0m  [["name", "houses"], ["LIMIT", 1]]
+  ↳ app/controllers/subreddits_controller.rb:22
+  [1m[36mSubscription Load (0.3ms)[0m  [1m[34mSELECT  "subscriptions".* FROM "subscriptions" WHERE "subscriptions"."subreddit_id" = $1 AND "subscriptions"."user_id" = $2 LIMIT $3[0m  [["subreddit_id", 3], ["user_id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/subreddits_controller.rb:23
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/subreddits_controller.rb:25
+  [1m[36mSubscription Destroy (0.4ms)[0m  [1m[31mDELETE FROM "subscriptions" WHERE "subscriptions"."id" = $1[0m  [["id", 4]]
+  ↳ app/controllers/subreddits_controller.rb:25
+  [1m[35m (7.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/subreddits_controller.rb:25
+Completed 200 OK in 13ms (Views: 0.3ms | ActiveRecord: 8.8ms)
+
+
+Started GET "/users/login/jsmith" for ::1 at 2019-07-31 13:33:17 -0700
+Processing by UsersController#checkForUser as */*
+  Parameters: {"username"=>"jsmith"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "jsmith"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:11
+Completed 200 OK in 2ms (Views: 0.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/2" for ::1 at 2019-07-31 13:33:17 -0700
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/models/user.rb:10
+  [1m[36mSubreddit Load (0.5ms)[0m  [1m[34mSELECT "subreddits".* FROM "subreddits" INNER JOIN "subscriptions" ON "subreddits"."id" = "subscriptions"."subreddit_id" WHERE "subscriptions"."user_id" = $1[0m  [["user_id", 2]]
+  ↳ app/models/user.rb:12
+Completed 200 OK in 4ms (Views: 0.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/subreddits/dogs" for ::1 at 2019-07-31 13:33:17 -0700
+Processing by SubredditsController#show as */*
+  Parameters: {"name"=>"dogs"}
+Completed 200 OK in 1230ms (Views: 4.1ms | ActiveRecord: 0.0ms)
+
+
