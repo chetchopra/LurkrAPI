@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_07_25_170047) do
+ActiveRecord::Schema.define(version: 2019_08_01_004503) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -25,6 +25,8 @@ ActiveRecord::Schema.define(version: 2019_07_25_170047) do
   create_table "settings", force: :cascade do |t|
     t.integer "user_id"
     t.integer "num_records"
+    t.integer "num_cols"
+    t.integer "theme_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -38,6 +40,16 @@ ActiveRecord::Schema.define(version: 2019_07_25_170047) do
   create_table "subscriptions", force: :cascade do |t|
     t.integer "user_id"
     t.integer "subreddit_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "themes", force: :cascade do |t|
+    t.string "header"
+    t.string "background"
+    t.string "subreddit"
+    t.string "post"
+    t.string "theme_name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

@@ -10,7 +10,8 @@ class User < ApplicationRecord
     user = User.find_by(id: userId)
 
     return user.to_json(:include => {
-      :subreddits => {:only => [:name]}
+      :subreddits => {:only => [:name]},
+      :setting => {:include => {:theme => {:except => [:updated_at, :created_at]}}, :except => [:updated_at, :created_at]},
     }, :except => [:updated_at, :created_at])
 
   end
