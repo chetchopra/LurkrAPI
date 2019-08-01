@@ -9,7 +9,9 @@ class SubredditsController < ApplicationController
 
   def create 
     subredditName = Subreddit.addSubreddit(subredditParams)
-    render json: {"name": subredditName}
+    # render json: {"name": subredditName}
+    render json: subredditName
+
   end
 
   def showPost

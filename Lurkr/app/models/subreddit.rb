@@ -23,9 +23,19 @@ class Subreddit < ApplicationRecord
   def self.addSubreddit(subredditParams) 
     # TO-DO: Handle banned subreddit response and no response
 
-    parsedResponse = JSON.parse(RestClient.get("http://reddit.com/r/#{subredditParams["name"]}.json"))
-    if parsedResponse["data"]["children"].size == 0
-      return nil
+    begin
+      parsedResponse = JSON.parse(RestClient.get("http://reddit.com/r/#{subredditParams["name"]}.json"))
+    rescue RestClient::NotFound => e
+     
+      e.response
+    end
+
+    # parsedResponse = JSON.parse(RestClient.get("http://reddit.com/r/#{subredditParams["name"]}.json"))
+ 
+
+    
+    if !parsedResponse || parsedResponse["data"]["children"].size == 0 
+      return {"error": "This subreddit is either banned, invite-only, or doesn't exist."}
     else 
       newSubreddit = Subreddit.find_by(name: subredditParams["name"])
       if newSubreddit
@@ -33,15 +43,17 @@ class Subreddit < ApplicationRecord
         if !oldSubscription
           Subscription.addSubscription(newSubreddit.id, subredditParams["user_id"])   
         else 
-          return "Issue"
+          return {"error": "You've already got this one!"}
         end   
       else 
         newSubreddit = Subreddit.create(name: subredditParams["name"])
         Subscription.addSubscription(newSubreddit.id, subredditParams["user_id"])
       end
       subredditPosts = parsedResponse["data"]["children"]
-      return subredditParams["name"]
+      return {"name": subredditParams["name"]}
     end
+
+
   end
 
 

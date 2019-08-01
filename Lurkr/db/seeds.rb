@@ -20,7 +20,7 @@ u3 = User.create(first_name: "Jane", last_name: "Smoke", username: "jsmoke", ema
 
 set1 = Setting.create(user_id: u1.id, num_records: 5, num_cols: 3, theme_id: t1.id);
 set2 = Setting.create(user_id: u2.id, num_records: 10, num_cols: 2,  theme_id: t2.id);
-set3 = Setting.create(user_id: u3.id, num_records: 10, num_cols: 4, theme_id: t5.id);
+set3 = Setting.create(user_id: u3.id, num_records: 10, num_cols: 1, theme_id: t5.id);
 
 
 sr1 = Subreddit.create(name: "cars");
