@@ -17,10 +17,18 @@ t7 = Theme.create(header: "#D3D3D3"  ,background: "#FFFFFF"  , subreddit: "#FFFF
 u1 = User.create(first_name: "Christopher", last_name: "Cabell", username: "ccabell", email_address: "x@gmail.com");
 u2 = User.create(first_name: "John", last_name: "Smith", username: "jsmith", email_address: "y@gmail.com");
 u3 = User.create(first_name: "Jane", last_name: "Smoke", username: "jsmoke", email_address: "z@gmail.com");
+u4 = User.create(first_name: "Aidi", last_name: "R", username: "aidir", email_address: "z@gmail.com");
+u5 = User.create(first_name: "Noah", last_name: "F", username: "noahf", email_address: "z@gmail.com");
+u6 = User.create(first_name: "Laura", last_name: "H", username: "laurah", email_address: "z@gmail.com");
+u7 = User.create(first_name: "Dang", last_name: "N", username: "dangn", email_address: "z@gmail.com");
 
 set1 = Setting.create(user_id: u1.id, num_records: 5, num_cols: 3, theme_id: t1.id);
 set2 = Setting.create(user_id: u2.id, num_records: 10, num_cols: 2,  theme_id: t2.id);
-set3 = Setting.create(user_id: u3.id, num_records: 10, num_cols: 1, theme_id: t5.id);
+set3 = Setting.create(user_id: u3.id, num_records: 10, num_cols: 2, theme_id: t3.id);
+set4 = Setting.create(user_id: u4.id, num_records: 10, num_cols: 3, theme_id: t4.id);
+set5 = Setting.create(user_id: u5.id, num_records: 10, num_cols: 1, theme_id: t5.id);
+set6 = Setting.create(user_id: u6.id, num_records: 10, num_cols: 3, theme_id: t6.id);
+set7 = Setting.create(user_id: u7.id, num_records: 10, num_cols: 1, theme_id: t7.id);
 
 
 sr1 = Subreddit.create(name: "cars");
