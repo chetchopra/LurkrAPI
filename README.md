@@ -7,7 +7,7 @@ The back-end simply manages user account details like what subreddits and settin
 
 You can check out the front-end at https://github.com/chetchopra/LurkrFrontEnd
 
-<img src="https://media.giphy.com/media/W5Cyzp04jWojGq6iYj/giphy.gif"/>
+<img src="https://media.giphy.com/media/W5Cyzp04jWojGq6iYj/giphy.gif"/> 
 
 <img src="https://media.giphy.com/media/RLz3BLmegc2QN8ZeLq/giphy.gif"/>
 
